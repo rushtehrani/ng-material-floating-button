@@ -34,10 +34,10 @@
 
         /**
          * Check if we're on a touch-enabled device.
-         * Requires Modernizr to run, otherwise simply returns false
+         * Requires Modernizr or Cordova to run, otherwise simply returns false
          */
         function _isTouchDevice(){
-          return window.Modernizr && Modernizr.touch;
+          return (window.Modernizr && Modernizr.touch) || !!window.cordova;
         }
 
         function _isHoverActive(){
